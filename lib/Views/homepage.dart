@@ -18,10 +18,10 @@ class HomePage extends StatelessWidget {
           Future(() => context.read<ProductBloc>().add(GetProducts())),
       child: Scaffold(
         floatingActionButton: Padding(
-          padding: EdgeInsets.all(30),
+          padding: const EdgeInsets.all(30),
           child: FloatingActionButton(
             onPressed: () {},
-            child: Text("+"),
+            child: const Center(child: Text("+")),
           ),
         ),
         body: Center(
@@ -54,9 +54,9 @@ class HomePage extends StatelessWidget {
                               )),
                               child: ListTile(
                                 title: Text(
-                                    "Description:${state.Products[index].Description}"),
-                                subtitle: Text(
-                                    "Category: ${state.Products[index].category.description}"),
+                                    "Description:${state.Products[index].ProductName}"),
+                                subtitle: const Text(
+                                    "Category: "),
                               ),
                             ),
                           );
@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
                     ),
                   );
                 } else {
-                  return CircularProgressIndicator();
+                  return const CircularProgressIndicator();
                 }
               },
             )

@@ -14,7 +14,7 @@ class ProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.symmetric(vertical: 100),
+        margin: const EdgeInsets.symmetric(vertical: 100),
         child: Center(
             child: Card(
           child: Padding(
@@ -22,16 +22,20 @@ class ProductPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(width: 200, height: 200, child: FlutterLogo()),
-                Container(
+                SizedBox(
+                    width: 200,
+                    height: 200,
+                    child:
+                        Image.asset("Assets/Images/${model.ProductName}.png")),
+                SizedBox(
                     width: 250,
                     height: 100,
-                    child: Text("Product ${model.Description}")),
-                Container(
+                    child: Text("Product ${model.ProductName}")),
+                const SizedBox(
                     width: 250,
                     height: 100,
-                    child: Text("Category ${model.category.description}")),
-                Container(
+                    child: Text("Category ")),
+                const SizedBox(
                   width: 250,
                   height: 100,
                   child: Text(

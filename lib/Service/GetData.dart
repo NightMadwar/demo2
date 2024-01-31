@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 abstract class GetData {
   Dio dio = Dio();
-  String BaseURL = "https://maher.alsakkaaminy.online/api/Products";
+  String BaseURL = "https://lab.iust.club/api/Products";
   dynamic dioGet();
   dynamic diofilter(String value);
 }
@@ -28,7 +28,7 @@ class Get extends GetData {
   diofilter(String value) async {
     try {
       final response = await dio.get(
-        BaseURL + "/filter",
+        "$BaseURL/filter",
         queryParameters: {
           'partialDescription': value,
           'partialCategory': value,
@@ -45,7 +45,7 @@ class Get extends GetData {
     } catch (e) {
       // Handle errors appropriately
       print(e);
-      throw e; // You might want to handle errors more gracefully in your actual app
+      rethrow; // You might want to handle errors more gracefully in your actual app
     }
   }
 }

@@ -10,13 +10,12 @@ part 'product_state.dart';
 class ProductBloc extends Bloc<ProductEvent, ProductState> {
   ProductBloc() : super(ProductInitial()) {
     on<GetProducts>((event, emit) async {
-      emit(Loading());
+      // emit(Loading());
       try {
         dynamic temp = await Get().dioGet();
         if (temp is Response) {
           List<ProductModel> Products =
               List.generate(temp.data.length, (index) {
-            // print(temp.data[index]);
             return ProductModel.fromMap(temp.data[index]);
           });
           // print(Products.length);

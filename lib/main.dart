@@ -1,4 +1,6 @@
-import 'package:demo2/Views/homepage.dart';
+import 'package:demo2/Views/SearchPage.dart';
+import 'package:demo2/Views/SignInPage.dart';
+import 'package:demo2/Views/SplashScreen.dart';
 import 'package:demo2/bloc/product_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
             create: (context) => ProductBloc(),
           ),
         ],
-        child: HomePage(),
+        child: const SignInPage(),
       ),
     );
   }

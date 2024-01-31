@@ -1,37 +1,36 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
-import 'package:demo2/Model/CategoryModel.dart';
 
 class ProductModel {
-  String Description;
-  CategoryModel category;
+  int ProductId;
+  String ProductName;
   ProductModel({
-    required this.Description,
-    required this.category,
+    required this.ProductId,
+    required this.ProductName,
   });
 
   ProductModel copyWith({
-    String? Description,
-    CategoryModel? category,
+    int? ProductId,
+    String? ProductName,
   }) {
     return ProductModel(
-      Description: Description ?? this.Description,
-      category: category ?? this.category,
+      ProductId: ProductId ?? this.ProductId,
+      ProductName: ProductName ?? this.ProductName,
     );
   }
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'description': Description,
-      'category': category.toMap(),
+      'productId': ProductId,
+      'productName': ProductName,
     };
   }
 
   factory ProductModel.fromMap(Map<String, dynamic> map) {
     return ProductModel(
-      Description: map['description'] as String,
-      category: CategoryModel.fromMap(map['category'] as Map<String, dynamic>),
+      ProductId: map['productId'] as int,
+      ProductName: map['productName'] as String,
     );
   }
 
@@ -42,15 +41,15 @@ class ProductModel {
 
   @override
   String toString() =>
-      'ProductModel(Description: $Description, category: $category)';
+      'ProductModel(productId: $ProductId, productName: $ProductName)';
 
   @override
   bool operator ==(covariant ProductModel other) {
     if (identical(this, other)) return true;
 
-    return other.Description == Description && other.category == category;
+    return other.ProductId == ProductId && other.ProductName == ProductName;
   }
 
   @override
-  int get hashCode => Description.hashCode ^ category.hashCode;
+  int get hashCode => ProductId.hashCode ^ ProductName.hashCode;
 }
