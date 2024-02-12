@@ -1,6 +1,5 @@
-import 'package:demo2/Views/SearchPage.dart';
-import 'package:demo2/Views/SignInPage.dart';
-import 'package:demo2/Views/SplashScreen.dart';
+import 'package:demo2/Views/SearchPage2.dart';
+import 'package:demo2/Views/svg.dart';
 import 'package:demo2/bloc/product_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,10 +18,10 @@ class MyApp extends StatelessWidget {
       home: MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (context) => ProductBloc(),
+            create: (context) => ProductBloc()..add(GetProducts()),
           ),
         ],
-        child: const SignInPage(),
+        child: const SearchPage2(),
       ),
     );
   }

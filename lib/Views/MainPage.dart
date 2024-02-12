@@ -55,8 +55,8 @@ class Products extends StatelessWidget {
               if (state is Success) {
                 return SingleChildScrollView(
                   child: Padding(
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
@@ -67,8 +67,9 @@ class Products extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                                child: Column(                                  
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 10.0),
+                                child: Column(
                                   children: List.generate(state.Products.length,
                                       (index) {
                                     return Stack(
@@ -111,9 +112,8 @@ class Products extends StatelessWidget {
                                               child: Row(
                                                 children: [
                                                   Padding(
-                                                    padding:
-                                                        const EdgeInsets.fromLTRB(
-                                                            30, 0, 0, 0),
+                                                    padding: const EdgeInsets
+                                                        .fromLTRB(30, 0, 0, 0),
                                                     child: InkWell(
                                                       onTap: () {
                                                         Navigator.of(context)

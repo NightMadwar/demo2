@@ -10,7 +10,7 @@ class SignInPage extends StatelessWidget {
       backgroundColor: Colors.blue,
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Spacer(),
+          const Spacer(),
           Expanded(
               child: Padding(
             padding: const EdgeInsets.all(30),
@@ -26,7 +26,7 @@ class SignInPage extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: MainInput(title: "Password")),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               MaterialButton(
                 minWidth: 250,
                 shape: RoundedRectangleBorder(
@@ -42,20 +42,20 @@ class SignInPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Spacer()
+              const Spacer()
             ]),
           ),
-          InkWell(onTap: () {}, child: Text("Forget Password?")),
-          Spacer(),
+          InkWell(onTap: () {}, child: const Text("Forget Password?")),
+          const Spacer(),
           MaterialButton(
             minWidth: 300,
             color: Colors.blue.shade400,
             onPressed: () {},
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
-            child: Text("Create new Account"),
+            child: const Text("Create new Account"),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
         ]),
       ),
     );

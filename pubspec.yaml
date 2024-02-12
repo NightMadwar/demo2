@@ -38,6 +38,8 @@ dependencies:
   dio: ^5.4.0
   expandable_text: ^2.3.0
   modal_bottom_sheet: ^2.1.2
+  image_picker: ^1.0.7
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +66,7 @@ flutter:
   assets:
     - Assets/Images/
     - Assets/Icons/
+    - Assets/Svg/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

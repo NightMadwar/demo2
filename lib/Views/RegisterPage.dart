@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
 
   @override
+  State<RegisterPage> createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
+  @override
   Widget build(BuildContext context) {
+    var media = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Center(
@@ -22,28 +28,35 @@ class RegisterPage extends StatelessWidget {
               )),
           const Spacer(flex: 1),
           Expanded(
-              child: MaterialButton(
-            minWidth: 250,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
-            textColor: Colors.white,
-            color: Colors.orange,
-            onPressed: () {},
-            child: const Text("Sing Up"),
+              child: InkWell(
+            onTap: () {},
+            child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.orange),
+                width: media.width / 2 * 1.4,
+                child: const Center(
+                    child: Text(
+                  "Sing Up",
+                  style: TextStyle(color: Colors.white),
+                ))),
           )),
           const Spacer(),
           Expanded(
-              child: MaterialButton(
-            elevation: 10,
-            minWidth: 250,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
-            textColor: Colors.white,
-            color: Colors.blue.shade400,
-            onPressed: () {},
-            child: const Text("Sing IN"),
+              child: InkWell(
+            onTap: () {},
+            child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.green),
+                width: media.width / 2 * 1.4,
+                child: const Center(
+                    child: Text(
+                  "Sing In",
+                  style: TextStyle(color: Colors.white),
+                ))),
           )),
-          Spacer(),
+          const Spacer(),
         ],
       )),
     );

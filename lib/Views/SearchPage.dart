@@ -97,7 +97,7 @@ class _SearchPageState extends State<SearchPage> {
             children: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
-                child: ChoiceChip(label: Text("House"), selected: false),
+                child: ActionChip(label: Text("sd")),
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
